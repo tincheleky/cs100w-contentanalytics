@@ -1,74 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>SJSU Ads System</title>
+  <link rel="icon" href="./SJSU_Web_Favicon_16x16.png"/>
+  <link rel="stylesheet" type="text/css" href="main.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
-  <style>
-      body{
-          background: grey;
-      }
-
-      .container{
-          width: 400px;
-          margin: 0 auto;
-          padding: 0px;
-      }
-
-      img{
-          margin: 0px;
-          padding: 0px;
-      }
-
-    </style>
-
-
+  <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
 </head>
+
 <body>
-
-<div class="container">
-    <div class="text-center">
-        <h1>Project FR</h1>
-        </br>
+<div class="container-fluid">
+  <!-- for time sidenav
+    <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="#section2">8:00 AM</a></li>
+        <li><a href="#section3">8:30 AM</a></li>
+        <li class="active"><a href="#section1">9:00 AM</a></li>
+        <li><a href="#section4">9:30 AM</a></li>
+        <li><a href="#section5">10:00 AM</a></li>
+        <li><a href="#section6">10:30 AM</a></li>
+        <li><a href="#section7">11:00 AM</a></li>
+        <li><a href="#section8">11:30 AM</a></li>
+        <li><a href="#section9">12:00 PM</a></li>
+        <li><a href="#section10">12:30 PM</a></li>
+      </ul><br>
+    </div>-->
+    
+    <div class="page-header">
+        <h1>@SJSU Ads</h1>
     </div>
+    
+    <div class="col-sm-12">
+        
+      <div class="row">
+          <div class="panel panel-info">
+              
+            <div class="panel-heading">
+              <div class = "row">
+                <div class="col-xs-3 adType">
+                    Classes
+                </div>
+                <div class="col-xs-6 adName">
+                    English 100Z
+                </div> 
+                <div class="col-xs-3 adTime">
+                    9:30AM
+                </div>
+              </div>
+            </div>
+              
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-xs-12 adDescription">
+                    The class will help you improve your English <br>
+                    Available seats 1000 <br><br>
+                    <a href="javascript:;">Click here for more information</a>
+                </div>
+              </div>    
+              
+              <hr>    
+              
+              <div class="row">
+                  <div class="col-xs-12">
+                      <p>Content Provider Information</p>
+                  </div>
+              </div>  
+                
+              <div class="row">
+                <div class="col-xs-12">
+                <p>Share</p>
+                <div class="col-xs-3"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></div>
+                  <div class="col-xs-3"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></div>
+                  <div class="col-xs-3"><i class="fa fa-snapchat-ghost fa-2x" aria-hidden="true"></i></div>
+                  <div class="col-xs-3"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></div>
+                </div>
+              </div>
 
-    <img id="photo" src="http://www.oldpotterybarn.co.uk/wp-content/uploads/2015/06/default-medium.png"  class="img-rounded"alt="Ops !" width="400" height="400">
-    </br>
-    </br>
-    </br>
-    <!--<input type="" class="btn btn-primary btn-block" name="btnUpload">Upload a photo</button>-->
-    <label class="btn btn-block btn-primary btn-file" id="unloadBtn" >Upload your photo 
-        <input type="file" id="imgFile" style="display: none;">
-    </label>
-    <script>
-        function loadImg(input) {
-            if (input.files && input.files[0]) {
-                var img = new FileReader();
+              
+            </div>
+          </div>
+      </div>
+        
+    
+    <div class="row">
+          <div class="panel panel-info">
+              
+            <div class="panel-heading">
+              <div class = "row">
+                <div class="col-xs-3 adType">
+                    Promotion
+                </div>
+                <div class="col-xs-6 adName">
+                    90% off everything
+                </div> 
+                <div class="col-xs-3 adTime">
+                    9:30AM
+                </div>
+              </div>
+            </div>
+              
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-xs-12 adDescription">
+                    Come and visit Spartan shop today <br>
+                    up to 90% off<br>
+                    <a href="javascript:;">Click here for more information</a>
+                </div>
+              </div>    
+              
+              <hr>    
+              
+              <div class="row">
+                  <div class="col-xs-12">
+                      <p>Content Provider Information</p>
+                  </div>
+              </div>  
+                
+              <div class="row">
+                <div class="col-xs-12">
+                <p>Share</p>
+                <div class="col-xs-3"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></div>
+                  <div class="col-xs-3"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></div>
+                  <div class="col-xs-3"><i class="fa fa-snapchat-ghost fa-2x" aria-hidden="true"></i></div>
+                  <div class="col-xs-3"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></div>
+                </div>
+              </div>
 
-                img.onload = function (e) {
-                    $('#photo').attr('src', e.target.result);
-                    document.getElementById("unloadBtn").innerHTML = "Click to see which VIP you resemble the most . . .";
-                    document.getElementById("unloadBtn").onclick = function () {
-                                                                    location.href = "http://localhost:3000/upload/show.html";
-                                                                    };
-                }
+              
+            </div>
+          </div>
+      </div>
+        
+    
+    <div class="row">
+          <div class="panel panel-info">
+              
+            <div class="panel-heading">
+              <div class = "row">
+                <div class="col-xs-3 adType">
+                    Social
+                </div>
+                <div class="col-xs-6 adName">
+                    Get popular
+                </div> 
+                <div class="col-xs-3 adTime">
+                    9:30AM
+                </div>
+              </div>
+            </div>
+              
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-xs-12 adDescription">
+                    Come and make friends @ ...  <br>
+                    @EasyFriendship <br>
+                    <a href="javascript:;">Click here for more information</a>
+                </div>
+              </div>    
+              
+              <hr>    
+              
+              <div class="row">
+                  <div class="col-xs-12">
+                      <p>Content Provider Information</p>
+                  </div>
+              </div>  
+                
+              <div class="row">
+                <div class="col-xs-12">
+                <p>Share</p>
+                <div class="col-xs-3"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></div>
+                  <div class="col-xs-3"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></div>
+                  <div class="col-xs-3"><i class="fa fa-snapchat-ghost fa-2x" aria-hidden="true"></i></div>
+                  <div class="col-xs-3"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></div>
+                </div>
+              </div>  
 
-                img.readAsDataURL(input.files[0]);
-            }
-        }
+              
+            </div>
+          </div>
+      </div>
+      
 
-        $("#imgFile").change(function(){
-            loadImg(this);
-        });
+    <div class="row">
+          <div class="panel panel-info">
+              
+            <div class="panel-heading">
+              <div class = "row">
+                <div class="col-xs-3 adType">
+                    Job
+                </div>
+                <div class="col-xs-6 adName">
+                    Job hunter 
+                </div> 
+                <div class="col-xs-3 adTime">
+                    9:30AM
+                </div>
+              </div>
+            </div>
+              
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-xs-12 adDescription">
+                    Onsite interviews with Cisco, intel, google ... <br>
+                    @EventCenter <br>
+                    <a href="javascript:;">Click here for more information</a>
+                </div>
+              </div>    
+              
+              <hr>    
+              
+              <div class="row">
+                  <div class="col-xs-12">
+                      <p>Content Provider Information</p>
+                  </div>
+              </div>  
+                
+              <div class="row">
+                <div class="col-xs-12">
+                <p>Share</p>
+                <div class="col-xs-3"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></div>
+                  <div class="col-xs-3"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></div>
+                  <div class="col-xs-3"><i class="fa fa-snapchat-ghost fa-2x" aria-hidden="true"></i></div>
+                  <div class="col-xs-3"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></div>
+                </div>
+              </div>  
 
-    </script>
-
+              
+            </div>
+          </div>
+      </div>
+        
+    </div>
 </div>
 
-</body>
-</html>
+<footer class="container-fluid">
+  <p>Team Mibi CS100W Section 2 Fall 2016</p>
+</footer>
 
+</body>
+    
+</html>
