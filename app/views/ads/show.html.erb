@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Display:</strong>
+  <%= @ad.ad_display_id %>
+</p>
+
+<p>
+  <strong>Ad:</strong>
+  <%= @ad.id %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @ad.ad_type %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ad.ad_name %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @ad.ad_time %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @ad.ad_duration %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @ad.ad_url %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @ad.ad_description %>
+</p>
+
+<%= link_to 'Edit', edit_ad_path(@ad) %> |
+<%= link_to 'Back', ads_path %>

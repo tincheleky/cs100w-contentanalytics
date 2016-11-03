@@ -35,207 +35,59 @@
         <h1>@SJSU Ads</h1>
     </div>
     
-    <div class="col-sm-12">
-        
-      <div class="row">
-          <div class="panel panel-info">
-              
-            <div class="panel-heading">
-              <div class = "row">
-                <div class="col-xs-3 adType">
-                    Classes
-                </div>
-                <div class="col-xs-6 adName">
-                    English 100Z
-                </div> 
-                <div class="col-xs-3 adTime">
-                    9:30AM
-                </div>
-              </div>
-            </div>
-              
-            <div class="panel-body">
-              <div class="row">
-                <div class="col-xs-12 adDescription">
-                    The class will help you improve your English <br>
-                    Available seats 1000 <br><br>
-                    <a href="javascript:;">Click here for more information</a>
-                </div>
-              </div>    
-              
-              <hr>    
-              
-              <div class="row">
-                  <div class="col-xs-12">
-                      <p>Content Provider Information</p>
+    <div class="col-sm-12">     
+      <% @ads.each do |ad| %>
+        <div class="row">
+                  <div class="panel panel-info">
+                      
+                    <div class="panel-heading">
+                      <div class = "row">
+                        <div class="col-xs-3 adType">
+                            <%= ad.ad_type %>
+                        </div>
+                        <div class="col-xs-6 adName">
+                            <%= ad.ad_name %>
+                        </div> 
+                        <div class="col-xs-3 adTime">
+                            <%= ad.ad_time %>
+                        </div>
+                      </div>
+                    </div>
+                      
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-xs-12 adDescription">
+                            <%= ad.ad_description %>
+                            <br>
+                            <br>
+                            <a href="javascript:;">Click here for more information</a>
+                        </div>
+                      </div>    
+                      
+                      <hr>    
+                      
+                      <div class="row">
+                          <div class="col-xs-12">
+                              <p>Content Provider Information</p>
+                          </div>
+                      </div>  
+                        
+                      <div class="row">
+                        <div class="col-xs-12">
+                        <p>Share</p>
+                        <div class="col-xs-3"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></div>
+                          <div class="col-xs-3"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></div>
+                          <div class="col-xs-3"><i class="fa fa-snapchat-ghost fa-2x" aria-hidden="true"></i></div>
+                          <div class="col-xs-3"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></div>
+                        </div>
+                      </div>
+
+                      
+                    </div>
                   </div>
-              </div>  
-                
-              <div class="row">
-                <div class="col-xs-12">
-                <p>Share</p>
-                <div class="col-xs-3"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></div>
-                  <div class="col-xs-3"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></div>
-                  <div class="col-xs-3"><i class="fa fa-snapchat-ghost fa-2x" aria-hidden="true"></i></div>
-                  <div class="col-xs-3"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></div>
-                </div>
               </div>
 
-              
-            </div>
-          </div>
-      </div>
-        
-    
-    <div class="row">
-          <div class="panel panel-info">
-              
-            <div class="panel-heading">
-              <div class = "row">
-                <div class="col-xs-3 adType">
-                    Promotion
-                </div>
-                <div class="col-xs-6 adName">
-                    90% off everything
-                </div> 
-                <div class="col-xs-3 adTime">
-                    9:30AM
-                </div>
-              </div>
-            </div>
-              
-            <div class="panel-body">
-              <div class="row">
-                <div class="col-xs-12 adDescription">
-                    Come and visit Spartan shop today <br>
-                    up to 90% off<br>
-                    <a href="javascript:;">Click here for more information</a>
-                </div>
-              </div>    
-              
-              <hr>    
-              
-              <div class="row">
-                  <div class="col-xs-12">
-                      <p>Content Provider Information</p>
-                  </div>
-              </div>  
-                
-              <div class="row">
-                <div class="col-xs-12">
-                <p>Share</p>
-                <div class="col-xs-3"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></div>
-                  <div class="col-xs-3"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></div>
-                  <div class="col-xs-3"><i class="fa fa-snapchat-ghost fa-2x" aria-hidden="true"></i></div>
-                  <div class="col-xs-3"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></div>
-                </div>
-              </div>
-
-              
-            </div>
-          </div>
-      </div>
-        
-    
-    <div class="row">
-          <div class="panel panel-info">
-              
-            <div class="panel-heading">
-              <div class = "row">
-                <div class="col-xs-3 adType">
-                    Social
-                </div>
-                <div class="col-xs-6 adName">
-                    Get popular
-                </div> 
-                <div class="col-xs-3 adTime">
-                    9:30AM
-                </div>
-              </div>
-            </div>
-              
-            <div class="panel-body">
-              <div class="row">
-                <div class="col-xs-12 adDescription">
-                    Come and make friends @ ...  <br>
-                    @EasyFriendship <br>
-                    <a href="javascript:;">Click here for more information</a>
-                </div>
-              </div>    
-              
-              <hr>    
-              
-              <div class="row">
-                  <div class="col-xs-12">
-                      <p>Content Provider Information</p>
-                  </div>
-              </div>  
-                
-              <div class="row">
-                <div class="col-xs-12">
-                <p>Share</p>
-                <div class="col-xs-3"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></div>
-                  <div class="col-xs-3"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></div>
-                  <div class="col-xs-3"><i class="fa fa-snapchat-ghost fa-2x" aria-hidden="true"></i></div>
-                  <div class="col-xs-3"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></div>
-                </div>
-              </div>  
-
-              
-            </div>
-          </div>
-      </div>
-      
-
-    <div class="row">
-          <div class="panel panel-info">
-              
-            <div class="panel-heading">
-              <div class = "row">
-                <div class="col-xs-3 adType">
-                    Job
-                </div>
-                <div class="col-xs-6 adName">
-                    Job hunter 
-                </div> 
-                <div class="col-xs-3 adTime">
-                    9:30AM
-                </div>
-              </div>
-            </div>
-              
-            <div class="panel-body">
-              <div class="row">
-                <div class="col-xs-12 adDescription">
-                    Onsite interviews with Cisco, intel, google ... <br>
-                    @EventCenter <br>
-                    <a href="javascript:;">Click here for more information</a>
-                </div>
-              </div>    
-              
-              <hr>    
-              
-              <div class="row">
-                  <div class="col-xs-12">
-                      <p>Content Provider Information</p>
-                  </div>
-              </div>  
-                
-              <div class="row">
-                <div class="col-xs-12">
-                <p>Share</p>
-                <div class="col-xs-3"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></div>
-                  <div class="col-xs-3"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></div>
-                  <div class="col-xs-3"><i class="fa fa-snapchat-ghost fa-2x" aria-hidden="true"></i></div>
-                  <div class="col-xs-3"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></div>
-                </div>
-              </div>  
-
-              
-            </div>
-          </div>
-      </div>
-        
+      <% end %>
     </div>
 </div>
 
