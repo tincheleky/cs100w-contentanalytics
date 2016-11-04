@@ -9,17 +9,17 @@ default: &default
   pool: 5
   timeout: 5000
 
-development:
-  <<: *default
-  database: db/development.sqlite3
+mysql_settings: &mysql_settings
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: Mibipassword1
+  host: 104.154.89.50
+  database: ads
 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
-test:
-  <<: *default
-  database: db/test.sqlite3
+development:
+  <<: *mysql_settings
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  <<: *mysql_settings
