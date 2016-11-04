@@ -14,5 +14,7 @@
 # [START runtime]
 runtime: ruby
 vm: true
+beta_settings:
+      cloud_sql_instances: "mibi-146718:us-central1:mibi-db"
 entrypoint: bundle exec rackup -p 8080 -E production config.ru
 # [END runtime]
