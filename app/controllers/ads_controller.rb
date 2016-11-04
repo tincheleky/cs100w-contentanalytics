@@ -1,5 +1,6 @@
 class AdsController < ApplicationController
   before_action :set_ad, only: [:show, :edit, :update, :destroy]
+  protect_from_forgery with: :null_session
 
   # GET /ads
   # GET /ads.json
