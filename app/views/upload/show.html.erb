@@ -1,94 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>SJSU Ads System</title>
+  <link rel="icon" href="./SJSU_Web_Favicon_16x16.png"/>
+  <link rel="stylesheet" type="text/css" href="main.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
-  <style>
-      body{
-          width: 900px;
-          margin: 0 auto;
-          background: darkgray;
-      }
-
-      .containerCenter{
-          /*width: 300px;*/
-          height: 300px;
-          margin: 0 auto;
-          padding: 0px;
-          background: slategrey;
-          margin-top: 200px;
-      }
-
-      .containerSubLeft{
-          /*width: 250px;*/
-          /*margin: 0 auto;*/
-          height: 250px;
-          background: grey;
-          margin-top: 225px;
-      }
-
-      .containerSubRight{
-          /*width: 250px;*/
-          /*margin: 0 auto;*/
-          height: 250px;
-          background: grey;
-          margin-top: 225px;
-      }
-
-      .percentageCenter{
-          border-radius: 5px;
-          background: springgreen;
-          width: 90px;
-          height: 30px;
-          float: bottom;
-          position: relative;
-          top: 285px;
-          left: 200px;
-      }
-
-      .percentageSubRight{
-          border-radius: 5px;
-          background: orange;
-          width: 60px;
-          height: 20px;
-          float: bottom;
-          float: right;
-          position: relative;
-          top: 240px;
-          right: 10px;
-      }
-
-      
-      
-    </style>
+  <%#<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">%>
 </head>
+
 <body>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
-<div class="row">
-
-
-    <div class="containerSubLeft col-sm-4">
-            <div class="percentageSubRight">
-        </div> 
-    </div> 
-
-
-    <div class="containerCenter col-sm-4">
-        <div class="percentageCenter">
-        </div>
+<div class="container-fluid">
+  <!-- for time sidenav
+    <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="#section2">8:00 AM</a></li>
+        <li><a href="#section3">8:30 AM</a></li>
+        <li class="active"><a href="#section1">9:00 AM</a></li>
+        <li><a href="#section4">9:30 AM</a></li>
+        <li><a href="#section5">10:00 AM</a></li>
+        <li><a href="#section6">10:30 AM</a></li>
+        <li><a href="#section7">11:00 AM</a></li>
+        <li><a href="#section8">11:30 AM</a></li>
+        <li><a href="#section9">12:00 PM</a></li>
+        <li><a href="#section10">12:30 PM</a></li>
+      </ul><br>
+    </div>-->
+    
+    <div class="page-header">
+        <h1>@SJSU Ads</h1></br>
+        <h2>Location <%= @location %></h2>
     </div>
+    
+    <div class="col-sm-12">     
+      <% @ads.each do |ad| %>
+        <div class="row">
+                  <div class="panel panel-info">
+                      
+                    <div class="panel-heading">
+                      <div class = "row">
+                        <div class="col-xs-3 adType">
+                            <%= ad.ad_type %>
+                        </div>
+                        <div class="col-xs-6 adName">
+                            <%= ad.ad_name %>
+                        </div> 
+                        <div class="col-xs-3 adTime">
+                            <%= ad.ad_time %>
+                        </div>
+                      </div>
+                    </div>
+                      
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-xs-12 adDescription">
+                            <%= ad.ad_description %>
+                            <br>
+                            <br>
+                               <a data-toggle="collapse" data-target="#more-information">Click here for more information</a>
+                              <div id="more-information" class="collapse">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. 
+                              </div>
+                        </div>
+                      </div>    
+                      
+                      <hr>    
+                      
+                      <div class="row">
+                          <div class="col-xs-12">
+                              <p>Content Provider Information</p>
+                          </div>
+                      </div>  
+                        
+                      <div class="row">
+                        <div class="col-xs-12">
+                        <p>Share</p>
+                          <div class="col-xs-3">
+                          <i class="fa fa-facebook fa-2x" aria-hidden="true" onclick="javascript:location.href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmibi-146718.appspot.com%2F&amp;src=sdkpreparse'" ></i>
+                        </div>
+                          <div class="col-xs-3"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></div>
+                          <div class="col-xs-3"><i class="fa fa-snapchat-ghost fa-2x" aria-hidden="true"></i></div>
+                          <div class="col-xs-3"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></div>
+                        </div>
+                      </div>
 
-    <div class="containerSubRight col-sm-4">
-        <div class="percentageSubRight">         
-        </div>            
-    </div> 
+                      
+                    </div>
+                  </div>
+              </div>
 
+      <% end %>
+    </div>
 </div>
-</body>
-</html>
 
+<footer class="container-fluid">
+  <p>Team Mibi CS100W Section 2 Fall 2016</p>
+</footer>
+
+</body>
+    
+</html>
