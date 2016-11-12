@@ -5,5 +5,10 @@
   <%= @statistic.location %>
 </p>
 
+<p>
+  <strong>Time Accessed:</strong>
+  <%= @statistic.created_at %>
+</p>
+
 <%= link_to 'Edit', edit_statistic_path(@statistic) %> |
 <%= link_to 'Back', statistics_path %>

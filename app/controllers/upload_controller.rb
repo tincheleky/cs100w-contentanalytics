@@ -13,6 +13,11 @@ class UploadController < ApplicationController
 
   def show
   	@ads = Ad.all
+    @statistic = Statistic.new
     @location = params[:id]
+    if @location.to_i >= 1 && @location.to_i <= 100
+      @statistic.location = @location.to_i
+      @statistic.save
+    end
    end
 end
