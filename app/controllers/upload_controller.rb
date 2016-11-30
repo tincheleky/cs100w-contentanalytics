@@ -20,4 +20,5 @@ class UploadController < ApplicationController
       @statistic.save
     end
    end
+
 end

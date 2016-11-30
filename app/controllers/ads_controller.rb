@@ -26,7 +26,7 @@ class AdsController < ApplicationController
   # POST /ads.json
   def create
     @ad = Ad.new(ad_params)
-
+    @ad.ads_counter = 0
     respond_to do |format|
       if @ad.save
         format.html { redirect_to @ad, notice: 'Ad was successfully created.' }
@@ -60,6 +60,11 @@ class AdsController < ApplicationController
       format.html { redirect_to ads_url, notice: 'Ad was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def countAndGetLink(ad)
+    Ad.increment_counter(:ads_counter, ad.ad_display_id)
+    ad.ad_url
   end
 
   private

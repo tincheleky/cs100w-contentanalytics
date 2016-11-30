@@ -55,7 +55,7 @@
                             <%= ad.ad_type %>
                         </div>
                         <div class="col-xs-6 adName">
-                            <%= ad.ad_name %>
+                          <%= link_to ad.ad_name, ad.ad_url, :target => '_blank'%>
                         </div> 
                         <div class="col-xs-3 adTime">
                             <%= ad.ad_time %>

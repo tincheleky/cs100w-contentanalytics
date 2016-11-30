@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Display</th>
+      <th>Counter</th>
       <th>Ad</th>
       <th>Type</th>
       <th>Name</th>
@@ -21,6 +22,7 @@
     <% @ads.each do |ad| %>
       <tr>
         <td><%= ad.ad_display_id %></td>
+        <td><%= ad.ads_counter %></td>
         <td><%= ad.id %></td>
         <td><%= ad.ad_type %></td>
         <td><%= ad.ad_name %></td>
